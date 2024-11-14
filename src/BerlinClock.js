@@ -4,6 +4,7 @@ export class BerlinClock {
     const lamps = ['0', '0', '0', '0'];
     if (minutes % 5 >= 1) lamps[0] = 'Y';
     if (minutes % 5 >= 2) lamps[1] = 'Y';
+    if (minutes % 5 >= 3) lamps[2] = 'Y';
     return lamps.join('');
     
     }
