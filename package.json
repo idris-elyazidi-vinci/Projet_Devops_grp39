@@ -1,7 +1,6 @@
 {
   "type": "module",
   "devDependencies": {
-    
     "jasmine": "^5.4.0"
   }
 }

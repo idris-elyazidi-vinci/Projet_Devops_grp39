@@ -12,5 +12,9 @@ describe("Berlin Clock Tests", function() {
         
         
     });
+    it("should display the correct five minute", function() {
+        expect(clock.getFiveMinutes(0)).toBe('00000000000');
+        
+    });
     
 });
