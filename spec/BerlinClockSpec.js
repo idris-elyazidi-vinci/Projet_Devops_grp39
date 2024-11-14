@@ -26,5 +26,6 @@ describe("Berlin Clock Tests", function() {
     });
     it("should display the correct five hour ", function() {
         expect(clock.getFiveHours(0)).toBe('0000');
+        expect(clock.getFiveHours(5)).toBe('R000');
     });
 });
