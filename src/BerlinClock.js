@@ -12,5 +12,10 @@ export class BerlinClock {
         }
         return lamps;
     }
+    getSingleHours(hours) {
+        const lamps = ['0', '0', '0', '0'];
+        if (hours % 5 >= 1) lamps[0] = 'R';
+        return lamps.join('');
+    }
     
 }    
