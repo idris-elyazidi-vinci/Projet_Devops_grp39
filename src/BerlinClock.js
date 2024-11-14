@@ -16,5 +16,11 @@ export class BerlinClock {
         const lampsOn = hours % 5;
         return 'R'.repeat(lampsOn).padEnd(4, '0');
     }
+    getFiveHours(hours) {
+        const lamps = ['0', '0', '0', '0'];
+        const onLamps = Math.floor(hours / 5);
+        if (onLamps >= 1) lamps[0] = 'R';
+        return lamps.join('');
+    }
     
 }    
