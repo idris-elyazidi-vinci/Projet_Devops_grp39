@@ -13,6 +13,7 @@ export class BerlinClock {
         if (onLamps >= 4) lamps[3] = 'Y';
         if (onLamps >= 5) lamps[4] = 'Y';
         if (onLamps >= 6) lamps[5] = 'R';
+        if (onLamps >= 7) lamps[6] = 'Y';
         return lamps.join('');
     }
     
