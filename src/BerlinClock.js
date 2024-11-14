@@ -9,6 +9,7 @@ export class BerlinClock {
         const onLamps = Math.floor(minutes / 5);
         if (onLamps >= 1) lamps[0] = 'Y';
         if (onLamps >= 2) lamps[1] = 'Y';
+        if (onLamps >= 3) lamps[2] = 'R';
 
         return lamps.join('');
     }

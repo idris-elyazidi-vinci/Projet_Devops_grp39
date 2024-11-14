@@ -15,6 +15,7 @@ describe("Berlin Clock Tests", function() {
     it("should display the correct five minute", function() {
         expect(clock.getFiveMinutes(0)).toBe('00000000000');
         expect(clock.getFiveMinutes(5)).toBe('Y0000000000');
+        expect(clock.getFiveMinutes(15)).toBe('YYR00000000');
 
     });
     
