@@ -13,12 +13,8 @@ export class BerlinClock {
         return lamps;
     }
     getSingleHours(hours) {
-        const lamps = ['0', '0', '0', '0'];
-        if (hours % 5 >= 1) lamps[0] = 'R';
-        if (hours % 5 >= 2) lamps[1] = 'R';
-        if (hours % 5 >= 3) lamps[2] = 'R';
-        if (hours % 5 >= 4) lamps[3] = 'R';
-        return lamps.join('');
+        const lampsOn = hours % 5;
+        return 'R'.repeat(lampsOn).padEnd(4, '0');
     }
     
 }    
