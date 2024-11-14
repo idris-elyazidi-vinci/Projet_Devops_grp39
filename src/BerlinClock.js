@@ -20,9 +20,9 @@ export class BerlinClock {
         const lamps = ['0', '0', '0', '0'];
         const onLamps = Math.floor(hours / 5);
         if (onLamps >= 1) lamps[0] = 'R';
-        if (onLamps >= 2) lamps[1] = 'R';
-        if (onLamps >= 3) lamps[2] = 'R';
-        if (onLamps >= 4) lamps[3] = 'R';
+        
+        
+        
         return lamps.join('');
         
     }
