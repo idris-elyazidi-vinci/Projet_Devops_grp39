@@ -35,5 +35,14 @@ describe("Berlin Clock Tests", function() {
         expect(clock.getSecondsLamp(2)).toBe('R');
         expect(clock.getSecondsLamp(1)).toBe('0');
     });
-
+    it('should return correct output for 15:53:00', () => {
+        const clock = new BerlinClock();
+        expect(clock.berlinClock(15, 53, 0)).toEqual([
+            "R",            // Seconds - lampe jaune (secondes paires)
+            "RRR0",         // Five hours - 4 lampes rouges pour 4 x 5 heures = 20 heures
+            "0000",         // Single hours - 0 lampe rouge pour l'heure restant
+            "YYRYYRYYRY0",  // Five minutes - 9 lampes (8 jaunes et 3 rouges pour 5, 10, 15 minutes)
+            "YYY0"          // Single minutes - 3 lampes jaunes pour les minutes restantes
+        ]);
+    });
 });

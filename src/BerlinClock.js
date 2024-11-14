@@ -24,5 +24,14 @@ export class BerlinClock {
     getSecondsLamp(seconds) {
         return seconds % 2 === 0 ? 'R' : '0';
     }
+    berlinClock(hours, minutes, seconds) {
+        return [
+            this.getSecondsLamp(seconds),
+            this.getFiveHours(hours),
+            this.getSingleHours(hours),
+            this.getFiveMinutes(minutes),
+            this.getSingleMinutes(minutes),
+        ];
+    }
     
 }    
