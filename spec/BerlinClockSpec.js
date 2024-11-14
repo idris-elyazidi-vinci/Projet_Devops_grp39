@@ -22,6 +22,6 @@ describe("Berlin Clock Tests", function() {
         expect(clock.getSingleHours(0)).toBe('0000');
         expect(clock.getSingleHours(2)).toBe('RR00');
         expect(clock.getSingleHours(23)).toBe('RRR0');
-        
+        expect(clock.getSingleHours(4)).toBe('RRRR');
     });
 });
