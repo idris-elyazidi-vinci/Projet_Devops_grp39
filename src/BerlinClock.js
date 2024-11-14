@@ -5,20 +5,12 @@ export class BerlinClock {
         return 'Y'.repeat(lampsOn).padEnd(4, '0');
     }
     getFiveMinutes(minutes) {
-        const lamps = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'];
-        const onLamps = Math.floor(minutes / 5);
-        if (onLamps >= 1) lamps[0] = 'Y';
-        if (onLamps >= 2) lamps[1] = 'Y';
-        if (onLamps >= 3) lamps[2] = 'R';
-        if (onLamps >= 4) lamps[3] = 'Y';
-        if (onLamps >= 5) lamps[4] = 'Y';
-        if (onLamps >= 6) lamps[5] = 'R';
-        if (onLamps >= 7) lamps[6] = 'Y';
-        if (onLamps >= 8) lamps[7] = 'Y';
-        if (onLamps >= 9) lamps[8] = 'R';
-        if (onLamps >= 10) lamps[9] = 'Y';
-        if (onLamps >= 11) lamps[10] = 'Y';
-        return lamps.join('');
+        const lampsOn = Math.floor(minutes / 5);
+        let lamps = '';
+        for (let i = 1; i <= 11; i++) {
+            lamps += i <= lampsOn ? (i % 3 === 0 ? 'R' : 'Y') : '0';
+        }
+        return lamps;
     }
     
 }    
