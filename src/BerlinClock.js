@@ -20,5 +20,9 @@ export class BerlinClock {
         const lampsOn = Math.floor(hours / 5);
         return 'R'.repeat(lampsOn).padEnd(4, '0');
     }
+
+    getSecondsLamp(seconds) {
+        return seconds % 2 === 0 ? 'R' : '0';
+    }
     
 }    

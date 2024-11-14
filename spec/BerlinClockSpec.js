@@ -30,4 +30,10 @@ describe("Berlin Clock Tests", function() {
         expect(clock.getFiveHours(13)).toBe('RR00');
         expect(clock.getFiveHours(23)).toBe('RRRR');
     });
+    it("should return 'Y' for even seconds", function() {
+        expect(clock.getSecondsLamp(0)).toBe('R');
+        expect(clock.getSecondsLamp(2)).toBe('R');
+        expect(clock.getSecondsLamp(1)).toBe('0');
+    });
+
 });
